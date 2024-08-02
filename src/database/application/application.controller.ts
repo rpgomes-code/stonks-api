@@ -18,7 +18,7 @@ export class ApplicationController {
     private readonly applicationService: ApplicationService,
   ) {}
 
-  @Get('application/:id')
+  @Get('application/:slug')
   async getApplicationById(@Param('slug') slug: string): Promise<ApplicationModel> {
     return this.applicationService.application({ app_slug: slug });
   }

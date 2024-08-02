@@ -1,0 +1,26 @@
+### Request ###
+
+GET /auth/applications HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+
+### Response ###
+
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 194
+ETag: W/"c2-MZUYMkIMpQAtmMRe9419FOfiVDY"
+Date: Fri, 02 Aug 2024 20:56:32 GMT
+Connection: close
+
+[
+  {
+    "id": "89b4df19-bd80-498b-bb95-186efb85829e",
+    "app_slug": "first-app",
+    "app_ip": "::ffff:127.0.0.1",
+    "is_active": false,
+    "createdAt": "2024-08-02T20:55:31.505Z",
+    "updatedAt": "2024-08-02T20:55:31.505Z"
+  }
+]
