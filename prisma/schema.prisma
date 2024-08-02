@@ -1,0 +1,78 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Application {
+  id             String         @id @default(uuid())
+  app_slug       String         @unique
+  app_ip         String         @unique
+  is_active      Boolean        @default(false)
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  appAccesses    AppAccess[]
+  accessTokens   AccessToken[]
+  methodAccesses MethodAccess[]
+  logs           Log[]
+
+  @@map("applications")
+}
+
+model AppAccess {
+  id          String      @id @default(uuid())
+  app_id      String
+  is_active   Boolean     @default(false)
+  expiresAt   DateTime
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  application Application @relation(fields: [app_id], references: [id])
+
+  @@map("app_accesses")
+}
+
+model MethodAccess {
+  id          String      @id @default(uuid())
+  app_id      String
+  method      String
+  is_active   Boolean     @default(false)
+  expiresAt   DateTime
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  application Application @relation(fields: [app_id], references: [id])
+
+  @@map("method_accesses")
+}
+
+model AccessToken {
+  id          String      @id @default(uuid())
+  app_id      String
+  Token       String
+  is_active   Boolean     @default(false)
+  expiresAt   DateTime
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  application Application @relation(fields: [app_id], references: [id])
+
+  @@map("access_tokens")
+}
+
+model Log {
+  id          String      @id @default(uuid())
+  app_id      String
+  method      String
+  message     String
+  http_code   Int
+  is_error    Boolean
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  application Application @relation(fields: [app_id], references: [id])
+
+  @@map("logs")
+}
