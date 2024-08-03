@@ -6,6 +6,8 @@ Content-Type: application/json
 
 ### Response ###
 
+## HTTP CODE - 200 ##
+
 HTTP/1.1 200 OK
 X-Powered-By: Express
 Content-Type: application/json; charset=utf-8
@@ -21,4 +23,21 @@ Connection: close
   "is_active": false,
   "createdAt": "2024-08-02T20:55:31.505Z",
   "updatedAt": "2024-08-02T21:07:08.416Z"
+}
+
+## HTTP CODE - 404 ##
+
+HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 200
+ETag: W/"c8-stgajLBTZ4qNP9jRp5r2r/7PgUY"
+Date: Sat, 03 Aug 2024 15:44:47 GMT
+Connection: close
+
+{
+  "statusCode": 404,
+  "timestamp": "2024-08-03T15:44:47.231Z",
+  "path": "/auth/application/89b4df19-bd80-498b-bb95-186efb85829e",
+  "message": "Application with ID 89b4df19-bd80-498b-bb95-186efb85829e not found"
 }

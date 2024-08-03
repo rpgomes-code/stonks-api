@@ -1,0 +1,45 @@
+### Request ###
+
+GET /auth/app-accesses/0/2/c811a17c HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+
+### Response ###
+
+## HTTP CODE - 200 ##
+
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 228
+ETag: W/"e4-oHcNTpUHOmQf/Oc4xVdlnI1zLV4"
+Date: Sat, 03 Aug 2024 16:06:39 GMT
+Connection: close
+
+[
+  {
+    "id": "c811a17c-9e9d-41ff-87a6-5511f77902b4",
+    "appId": "e87805ae-4c6d-4aee-b050-0e1ffef86e83",
+    "isActive": false,
+    "expiresAt": "2024-09-02T16:04:31.757Z",
+    "createdAt": "2024-08-03T16:04:31.759Z",
+    "updatedAt": "2024-08-03T16:04:31.759Z"
+  }
+]
+
+## HTTP CODE - 404 ##
+
+HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 129
+ETag: W/"81-LA2UKRXgI+0Bt4xNzT02rgEH5Rg"
+Date: Sat, 03 Aug 2024 16:13:25 GMT
+Connection: close
+
+{
+  "statusCode": 404,
+  "timestamp": "2024-08-03T16:13:25.892Z",
+  "path": "/auth/app-accesses/0/2/true",
+  "message": "App Accesses not found"
+}

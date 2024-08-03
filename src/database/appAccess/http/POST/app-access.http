@@ -1,0 +1,47 @@
+### Request ###
+
+POST /auth/app-access HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+
+{
+  "appId": "e87805ae-4c6d-4aee-b050-0e1ffef86e83"
+}
+
+### Response ###
+
+## HTTP CODE - 201 ##
+
+HTTP/1.1 201 Created
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 226
+ETag: W/"e2-S92z5fipggNEyFHb1RrGP/yS/Ys"
+Date: Sat, 03 Aug 2024 16:04:32 GMT
+Connection: close
+
+{
+  "id": "c811a17c-9e9d-41ff-87a6-5511f77902b4",
+  "appId": "e87805ae-4c6d-4aee-b050-0e1ffef86e83",
+  "isActive": false,
+  "expiresAt": "2024-09-02T16:04:31.757Z",
+  "createdAt": "2024-08-03T16:04:31.759Z",
+  "updatedAt": "2024-08-03T16:04:31.759Z"
+}
+
+## HTTP CODE - 400 ##
+
+HTTP/1.1 400 Bad Request
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 117
+ETag: W/"75-L6GIv93UQUVG/khgWZZ5ajCR+GA"
+Date: Sat, 03 Aug 2024 16:05:01 GMT
+Connection: close
+
+{
+  "statusCode": 400,
+  "timestamp": "2024-08-03T16:05:01.154Z",
+  "path": "/auth/app-access",
+  "message": "Bad Request Exception"
+}

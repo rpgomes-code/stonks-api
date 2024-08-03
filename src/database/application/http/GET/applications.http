@@ -1,10 +1,12 @@
 ### Request ###
 
-GET /auth/applications HTTP/1.1
+GET /auth/applications/0/5/first HTTP/1.1
 Host: localhost:3000
 Content-Type: application/json
 
 ### Response ###
+
+## HTTP CODE - 200 ##
 
 HTTP/1.1 200 OK
 X-Powered-By: Express
@@ -17,10 +19,27 @@ Connection: close
 [
   {
     "id": "89b4df19-bd80-498b-bb95-186efb85829e",
-    "app_slug": "first-app",
-    "app_ip": "::ffff:127.0.0.1",
-    "is_active": false,
+    "appSlug": "first-app",
+    "appIp": "::ffff:127.0.0.1",
+    "isActive": false,
     "createdAt": "2024-08-02T20:55:31.505Z",
     "updatedAt": "2024-08-02T20:55:31.505Z"
   }
 ]
+
+## HTTP CODE - 404 ##
+
+HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 130
+ETag: W/"82-t6EHxr1jndqnG3rEGNsL8XTYlRg"
+Date: Sat, 03 Aug 2024 15:47:06 GMT
+Connection: close
+
+{
+  "statusCode": 404,
+  "timestamp": "2024-08-03T15:47:06.334Z",
+  "path": "/auth/applications/0/5/first",
+  "message": "Applications not found"
+}

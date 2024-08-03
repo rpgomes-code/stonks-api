@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from '../prisma/prisma.service';
 import { AppAccess, Prisma } from '@prisma/client';
+import { PrismaService } from '../prisma/prisma.service';
 
 @Injectable()
 export class AppAccessService {
@@ -14,7 +14,7 @@ export class AppAccessService {
     });
   }
 
-  async appAccesss(params: {
+  async appAccesses(params: {
     skip?: number;
     take?: number;
     cursor?: Prisma.AppAccessWhereUniqueInput;
