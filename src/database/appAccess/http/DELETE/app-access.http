@@ -1,0 +1,43 @@
+### Request ###
+
+DELETE /auth/app-access/c811a17c-9e9d-41ff-87a6-5511f77902b4 HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+
+### Response ###
+
+## HTTP CODE - 200 ##
+
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 226
+ETag: W/"e2-S92z5fipggNEyFHb1RrGP/yS/Ys"
+Date: Sat, 03 Aug 2024 16:15:18 GMT
+Connection: close
+
+{
+  "id": "c811a17c-9e9d-41ff-87a6-5511f77902b4",
+  "appId": "e87805ae-4c6d-4aee-b050-0e1ffef86e83",
+  "isActive": false,
+  "expiresAt": "2024-09-02T16:04:31.757Z",
+  "createdAt": "2024-08-03T16:04:31.759Z",
+  "updatedAt": "2024-08-03T16:04:31.759Z"
+}
+
+## HTTP CODE - 404 ##
+
+HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 198
+ETag: W/"c6-63LsebDhIPaII2uHvUcrMOaQi6A"
+Date: Sat, 03 Aug 2024 16:15:24 GMT
+Connection: close
+
+{
+  "statusCode": 404,
+  "timestamp": "2024-08-03T16:15:24.860Z",
+  "path": "/auth/app-access/c811a17c-9e9d-41ff-87a6-5511f77902b4",
+  "message": "App Access with ID c811a17c-9e9d-41ff-87a6-5511f77902b4 not found"
+}

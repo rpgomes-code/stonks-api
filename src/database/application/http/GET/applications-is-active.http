@@ -1,0 +1,45 @@
+### Request ###
+
+GET /auth/applications-is-active/0/10/false HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+
+### Response ###
+
+## HTTP CODE - 200 ##
+
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 191
+ETag: W/"bf-Z1fg8vPuAarg8i2Ve7yBigDz2P4"
+Date: Sat, 03 Aug 2024 16:34:50 GMT
+Connection: close
+
+[
+  {
+    "id": "e87805ae-4c6d-4aee-b050-0e1ffef86e83",
+    "appSlug": "first-app",
+    "appIp": "::ffff:127.0.0.1",
+    "isActive": false,
+    "createdAt": "2024-08-03T15:53:04.508Z",
+    "updatedAt": "2024-08-03T15:53:04.508Z"
+  }
+]
+
+## HTTP CODE - 404 ##
+
+HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 168
+ETag: W/"a8-u3v/3oqjYJ0fO4a1aIeLsFfgVMw"
+Date: Sat, 03 Aug 2024 16:34:58 GMT
+Connection: close
+
+{
+  "statusCode": 404,
+  "timestamp": "2024-08-03T16:34:58.117Z",
+  "path": "/auth/applications-is-active/0/10/true",
+  "message": "Applications with isActive equal to true not found"
+}
