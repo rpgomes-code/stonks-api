@@ -1,0 +1,53 @@
+### Request ###
+
+GET /yahoo-finance/recommendations?symbol=AAPL HTTP/1.1
+Host: localhost:3000
+
+### Response ###
+
+## HTTP CODE - 200 ##
+
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 215
+ETag: W/"d7-j0T78eXm4O7HF04FkyCV5+cSu6o"
+Date: Tue, 13 Aug 2024 22:32:56 GMT
+Connection: close
+
+{
+  "symbol": "AAPL",
+  "recommendedSymbols": [
+    {
+      "symbol": "AMZN",
+      "score": 0.318422
+    },
+    {
+      "symbol": "TSLA",
+      "score": 0.298838
+    },
+    {
+      "symbol": "GOOG",
+      "score": 0.281791
+    },
+    {
+      "symbol": "META",
+      "score": 0.269974
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.219076
+    }
+  ]
+}
+
+## HTTP CODE - 404 ##
+
+HTTP/1.1 404 Not Found
+Content-Type: application/json; charset=utf-8
+
+{
+  "statusCode": 404,
+  "message": "Recommendations for symbol AAPL not found",
+  "error": "Not Found"
+}

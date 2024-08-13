@@ -1,0 +1,156 @@
+### Request ###
+
+GET /yahoo-finance/search?query=Apple&quotesCount=2&newsCount=2 HTTP/1.1
+Host: localhost:3000
+
+### Response ###
+
+## HTTP CODE - 200 ##
+
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 3062
+ETag: W/"bf6-yi6l2CEVOFzUBtZiRIszPzXslfs"
+Date: Tue, 13 Aug 2024 22:30:04 GMT
+Connection: close
+
+{
+  "explains": [],
+  "count": 6,
+  "quotes": [
+    {
+      "exchange": "NMS",
+      "shortname": "Apple Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "AAPL",
+      "index": "quotes",
+      "score": 53490,
+      "typeDisp": "Equity",
+      "longname": "Apple Inc.",
+      "exchDisp": "NASDAQ",
+      "sector": "Technology",
+      "sectorDisp": "Technology",
+      "industry": "Consumer Electronics",
+      "industryDisp": "Consumer Electronics",
+      "dispSecIndFlag": true,
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "NYQ",
+      "shortname": "Apple Hospitality REIT, Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "APLE",
+      "index": "quotes",
+      "score": 20082,
+      "typeDisp": "Equity",
+      "longname": "Apple Hospitality REIT, Inc.",
+      "exchDisp": "NYSE",
+      "sector": "Real Estate",
+      "sectorDisp": "Real Estate",
+      "industry": "REIT—Hotel & Motel",
+      "industryDisp": "REIT—Hotel & Motel",
+      "isYahooFinance": true
+    },
+    {
+      "index": "d8c1b54896db4e148d5bff7bdd4778d0",
+      "name": "Apple Tree Partners",
+      "permalink": "apple-tree-partners",
+      "isYahooFinance": false
+    },
+    {
+      "index": "902d61b27b7039fda61fc3a9dc44fe1a",
+      "name": "Applecart",
+      "permalink": "project-applecart",
+      "isYahooFinance": false
+    }
+  ],
+  "news": [
+    {
+      "uuid": "841cc094-f9e8-3acd-84b6-37418621ff4f",
+      "title": "Apple, Intel, And AMD Lead Charge In AI-Capable PC Market Surge: Report",
+      "publisher": "Benzinga",
+      "link": "https://finance.yahoo.com/news/apple-intel-amd-lead-charge-173706425.html",
+      "providerPublishTime": "2024-08-13T17:37:06.000Z",
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/rtJH0CfcV6XXu1QmK4z2lA--~B/aD01NzY7dz0xMDI0O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Benzinga/942eced4f1f701227a221af30354ec3b",
+            "width": 1024,
+            "height": 576,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/S9Wkxhvp91U1FdWIHbupbg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Benzinga/942eced4f1f701227a221af30354ec3b",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "INTC",
+        "AAPL",
+        "AMD"
+      ]
+    },
+    {
+      "uuid": "4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b",
+      "title": "Magnificent Seven Stocks: Nvidia Stock, Tesla, Apple, Meta Rally",
+      "publisher": "Investor's Business Daily",
+      "link": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html",
+      "providerPublishTime": "2024-08-13T19:22:42.000Z",
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/kV2Fc5Kz3y8hNbXlVxHRQg--~B/aD01NjU7dz0xMDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/d5bee44b5deef90ccff5d488feb6722d",
+            "width": 1000,
+            "height": 565,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/My3O.I831YydYsn.iMoUvw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/d5bee44b5deef90ccff5d488feb6722d",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "NVDA",
+        "AAPL",
+        "TSLA",
+        "META",
+        "MSFT"
+      ]
+    }
+  ],
+  "nav": [],
+  "lists": [],
+  "researchReports": [],
+  "screenerFieldResults": [],
+  "totalTime": 106,
+  "timeTakenForQuotes": 429,
+  "timeTakenForNews": 700,
+  "timeTakenForAlgowatchlist": 400,
+  "timeTakenForPredefinedScreener": 400,
+  "timeTakenForCrunchbase": 400,
+  "timeTakenForNav": 400,
+  "timeTakenForResearchReports": 0,
+  "timeTakenForScreenerField": 0,
+  "timeTakenForCulturalAssets": 0,
+  "timeTakenForSearchLists": 0
+}
+
+## HTTP CODE - 404 ##
+
+HTTP/1.1 404 Not Found
+Content-Type: application/json; charset=utf-8
+
+{
+  "statusCode": 404,
+  "message": "Search results for query Apple not found",
+  "error": "Not Found"
+}

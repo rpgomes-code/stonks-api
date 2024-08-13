@@ -1,0 +1,40 @@
+### Request ###
+
+GET /yahoo-finance/stock-image?symbol=AAPL HTTP/1.1
+Host: localhost:3000
+
+### Response ###
+
+## HTTP CODE - 200 ##
+
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 69
+ETag: W/"45-lQP7jY4EABad0M5Ly9eZx/XklJo"
+Date: Tue, 13 Aug 2024 22:44:08 GMT
+Connection: close
+
+{
+  "imageUrl": "https://financialmodelingprep.com/image-stock/AAPL.png"
+}
+
+## HTTP CODE - 200 (No image found) ##
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "imageUrl": null
+}
+
+## HTTP CODE - 500 ##
+
+HTTP/1.1 500 Internal Server Error
+Content-Type: application/json; charset=utf-8
+
+{
+  "statusCode": 500,
+  "message": "Failed to fetch stock image: Network error",
+  "error": "Internal Server Error"
+}

@@ -1,0 +1,50 @@
+### Request ###
+
+GET /yahoo-finance/trending-symbols?country=US&count=5 HTTP/1.1
+Host: localhost:3000
+
+### Response ###
+
+## HTTP CODE - 200 ##
+
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 166
+ETag: W/"a6-I2RYLBs+ROc7jrOF9rwnOpH8KZE"
+Date: Tue, 13 Aug 2024 22:32:11 GMT
+Connection: close
+
+{
+  "count": 5,
+  "quotes": [
+    {
+      "symbol": "SBUX"
+    },
+    {
+      "symbol": "CMG"
+    },
+    {
+      "symbol": "NU"
+    },
+    {
+      "symbol": "DKNG"
+    },
+    {
+      "symbol": "NKE"
+    }
+  ],
+  "jobTimestamp": 1723587570922,
+  "startInterval": 202408132100
+}
+
+## HTTP CODE - 404 ##
+
+HTTP/1.1 404 Not Found
+Content-Type: application/json; charset=utf-8
+
+{
+  "statusCode": 404,
+  "message": "Trending symbols for country US not found",
+  "error": "Not Found"
+}

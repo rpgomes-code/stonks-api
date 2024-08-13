@@ -1,0 +1,48 @@
+### Request ###
+
+GET /yahoo-finance/historical?symbol=AAPL&from=2024-07-30&to=2024-08-01&interval=1d HTTP/1.1
+Host: localhost:3000
+
+### Response ###
+
+## HTTP CODE - 200 ##
+
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 297
+ETag: W/"129-MS7Kv3tlFVjai4rr3Art+9TBnxI"
+Date: Tue, 13 Aug 2024 22:24:32 GMT
+Connection: close
+
+[
+  {
+    "date": "2024-07-30T00:00:00.000Z",
+    "open": 219.190002,
+    "high": 220.330002,
+    "low": 216.119995,
+    "close": 218.800003,
+    "adjClose": 218.547043,
+    "volume": 41643800
+  },
+  {
+    "date": "2024-07-31T00:00:00.000Z",
+    "open": 221.440002,
+    "high": 223.820007,
+    "low": 220.630005,
+    "close": 222.080002,
+    "adjClose": 221.823242,
+    "volume": 50036300
+  }
+]
+
+## HTTP CODE - 404 ##
+
+HTTP/1.1 404 Not Found
+Content-Type: application/json; charset=utf-8
+
+{
+  "statusCode": 404,
+  "message": "Historical data for symbol AAPL not found",
+  "error": "Not Found"
+}
