@@ -9,10 +9,22 @@ Host: localhost:3000
 
 HTTP/1.1 200 OK
 X-Powered-By: Express
+Vary: Origin
+Access-Control-Allow-Credentials: true
+Access-Control-Expose-Headers: Content-Length,X-Total-Count
+X-RateLimit-Limit: 25
+X-RateLimit-Remaining: 24
+X-RateLimit-Reset: 60
+X-RateLimit-Limit-short: 10
+X-RateLimit-Remaining-short: 9
+X-RateLimit-Reset-short: 60
+X-RateLimit-Limit-longer: 70
+X-RateLimit-Remaining-longer: 69
+X-RateLimit-Reset-longer: 60
 Content-Type: application/json; charset=utf-8
-Content-Length: 3062
-ETag: W/"bf6-yi6l2CEVOFzUBtZiRIszPzXslfs"
-Date: Tue, 13 Aug 2024 22:30:04 GMT
+Content-Length: 2542
+ETag: W/"9ee-8f4XqcLsKIZ8z7GShHgMZmU793k"
+Date: Wed, 14 Aug 2024 18:49:43 GMT
 Connection: close
 
 {
@@ -25,7 +37,7 @@ Connection: close
       "quoteType": "EQUITY",
       "symbol": "AAPL",
       "index": "quotes",
-      "score": 53490,
+      "score": 55203,
       "typeDisp": "Equity",
       "longname": "Apple Inc.",
       "exchDisp": "NASDAQ",
@@ -42,7 +54,7 @@ Connection: close
       "quoteType": "EQUITY",
       "symbol": "APLE",
       "index": "quotes",
-      "score": 20082,
+      "score": 20080,
       "typeDisp": "Equity",
       "longname": "Apple Hospitality REIT, Inc.",
       "exchDisp": "NYSE",
@@ -67,72 +79,47 @@ Connection: close
   ],
   "news": [
     {
-      "uuid": "841cc094-f9e8-3acd-84b6-37418621ff4f",
-      "title": "Apple, Intel, And AMD Lead Charge In AI-Capable PC Market Surge: Report",
-      "publisher": "Benzinga",
-      "link": "https://finance.yahoo.com/news/apple-intel-amd-lead-charge-173706425.html",
-      "providerPublishTime": "2024-08-13T17:37:06.000Z",
+      "uuid": "ef0d5476-3fe8-3808-8e92-81583f91c11a",
+      "title": "Apple to Let Third Parties Use iPhone Payment Chip for Transactions",
+      "publisher": "MT Newswires",
+      "link": "https://finance.yahoo.com/news/apple-let-third-parties-iphone-163239762.html",
+      "providerPublishTime": "2024-08-14T16:32:39.000Z",
       "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/rtJH0CfcV6XXu1QmK4z2lA--~B/aD01NzY7dz0xMDI0O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Benzinga/942eced4f1f701227a221af30354ec3b",
-            "width": 1024,
-            "height": 576,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/S9Wkxhvp91U1FdWIHbupbg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Benzinga/942eced4f1f701227a221af30354ec3b",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
       "relatedTickers": [
-        "INTC",
-        "AAPL",
-        "AMD"
+        "AAPL"
       ]
     },
     {
-      "uuid": "4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b",
-      "title": "Magnificent Seven Stocks: Nvidia Stock, Tesla, Apple, Meta Rally",
-      "publisher": "Investor's Business Daily",
-      "link": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html",
-      "providerPublishTime": "2024-08-13T19:22:42.000Z",
+      "uuid": "3b1553d1-e890-43f7-a69a-b72f4be29b5b",
+      "title": "Apple is finally opening up NFC to third-party developers in iOS 18.1",
+      "publisher": "Engadget",
+      "link": "https://finance.yahoo.com/m/3b1553d1-e890-43f7-a69a-b72f4be29b5b/apple-is-finally-opening-up.html",
+      "providerPublishTime": "2024-08-14T16:40:28.000Z",
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/kV2Fc5Kz3y8hNbXlVxHRQg--~B/aD01NjU7dz0xMDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/d5bee44b5deef90ccff5d488feb6722d",
-            "width": 1000,
-            "height": 565,
+            "url": "https://s.yimg.com/uu/api/res/1.2/MnBN1nE2nGoYeVjy5GzBKA--~B/aD02MzA7dz0xMjAwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2024-08/dfde9ec0-5a5a-11ef-9fff-5f8f40d36d5c",
+            "width": 1200,
+            "height": 630,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/My3O.I831YydYsn.iMoUvw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/d5bee44b5deef90ccff5d488feb6722d",
+            "url": "https://s.yimg.com/uu/api/res/1.2/O.QVlSZswqH7tCM6UD.VJQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2024-08/dfde9ec0-5a5a-11ef-9fff-5f8f40d36d5c",
             "width": 140,
             "height": 140,
             "tag": "140x140"
           }
         ]
-      },
-      "relatedTickers": [
-        "NVDA",
-        "AAPL",
-        "TSLA",
-        "META",
-        "MSFT"
-      ]
+      }
     }
   ],
   "nav": [],
   "lists": [],
   "researchReports": [],
   "screenerFieldResults": [],
-  "totalTime": 106,
-  "timeTakenForQuotes": 429,
+  "totalTime": 107,
+  "timeTakenForQuotes": 435,
   "timeTakenForNews": 700,
   "timeTakenForAlgowatchlist": 400,
   "timeTakenForPredefinedScreener": 400,

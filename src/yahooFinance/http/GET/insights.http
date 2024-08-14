@@ -9,10 +9,22 @@ Host: localhost:3000
 
 HTTP/1.1 200 OK
 X-Powered-By: Express
+Vary: Origin
+Access-Control-Allow-Credentials: true
+Access-Control-Expose-Headers: Content-Length,X-Total-Count
+X-RateLimit-Limit: 25
+X-RateLimit-Remaining: 24
+X-RateLimit-Reset: 60
+X-RateLimit-Limit-short: 10
+X-RateLimit-Remaining-short: 9
+X-RateLimit-Reset-short: 60
+X-RateLimit-Limit-longer: 70
+X-RateLimit-Remaining-longer: 69
+X-RateLimit-Reset-longer: 60
 Content-Type: application/json; charset=utf-8
-Content-Length: 19395
-ETag: W/"4bc3-mml76LJa4HJdULoFF62mM/7yNPM"
-Date: Tue, 13 Aug 2024 22:26:35 GMT
+Content-Length: 19389
+ETag: W/"4bbd-YA4MsIDB94kdqfeYEcHujwRgNHs"
+Date: Wed, 14 Aug 2024 18:47:48 GMT
 Connection: close
 
 {
@@ -22,16 +34,16 @@ Connection: close
       "provider": "Trading Central",
       "sector": "Technology",
       "shortTermOutlook": {
-        "stateDescription": "Recent bearish events outweigh bullish events.",
-        "direction": "Bearish",
-        "score": 2,
-        "scoreDescription": "Bearish Evidence",
-        "sectorDirection": "Bearish",
-        "sectorScore": 1,
-        "sectorScoreDescription": "Weak Bearish Evidence",
-        "indexDirection": "Bearish",
+        "stateDescription": "Recent bullish events outweigh bearish events.",
+        "direction": "Bullish",
+        "score": 1,
+        "scoreDescription": "Weak Bullish Evidence",
+        "sectorDirection": "Bullish",
+        "sectorScore": 3,
+        "sectorScoreDescription": "Strong Bullish Evidence",
+        "indexDirection": "Bullish",
         "indexScore": 2,
-        "indexScoreDescription": "Bearish Evidence"
+        "indexScoreDescription": "Bullish Evidence"
       },
       "intermediateTermOutlook": {
         "stateDescription": "Recent bullish events outweigh bearish events.",
@@ -61,8 +73,8 @@ Connection: close
     "keyTechnicals": {
       "provider": "Trading Central",
       "support": 173.57,
-      "resistance": 218.95,
-      "stopLoss": 204.300891
+      "resistance": 224.18,
+      "stopLoss": 209.519285
     },
     "valuation": {
       "color": 0,
@@ -79,8 +91,8 @@ Connection: close
       "hiring": 0.9512999999999999,
       "sustainability": 0.575,
       "insiderSentiments": 0.27390000000000003,
-      "earningsReports": 0.8809999999999999,
-      "dividends": 0.061900000000000004
+      "earningsReports": 0.8789,
+      "dividends": 0.0634
     },
     "sector": {
       "innovativeness": 0.5,
@@ -123,13 +135,13 @@ Connection: close
   },
   "events": [
     {
-      "eventType": "Slow Stochastic",
-      "pricePeriod": "W",
+      "eventType": "Price Crosses Moving Average",
+      "pricePeriod": "D",
       "tradingHorizon": "S",
-      "tradeType": "S",
+      "tradeType": "L",
       "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-      "startDate": "2024-08-09T13:30:00.000Z",
-      "endDate": "2024-08-09T13:30:00.000Z"
+      "startDate": "2024-08-13T13:30:00.000Z",
+      "endDate": "2024-08-13T13:30:00.000Z"
     }
   ],
   "reports": [
@@ -145,10 +157,10 @@ Connection: close
         "PBF",
         "NINE",
         "TALO",
-        "ABBV",
         "RHP",
-        "LH",
+        "ABBV",
         "SLNO",
+        "LH",
         "AVB",
         "CRK"
       ],
@@ -460,15 +472,6 @@ Connection: close
       "formType": "8-K"
     },
     {
-      "id": "0001193125-22-128368_320193",
-      "type": "Offering Registrations",
-      "title": "S-8 : Offering Registrations",
-      "description": "Initial registration statement for securities to be offered to employees pursuant to employee benefit plans",
-      "filingDate": "2022-04-29T00:00:00.000Z",
-      "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000119312522128368/thumbnail.png",
-      "formType": "S-8"
-    },
-    {
       "id": "0001193125-22-128361_320193",
       "type": "Offering Registrations",
       "title": "S-8 POS : Offering Registrations",
@@ -476,6 +479,15 @@ Connection: close
       "filingDate": "2022-04-29T00:00:00.000Z",
       "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000119312522128361/thumbnail.png",
       "formType": "S-8 POS"
+    },
+    {
+      "id": "0001193125-22-128368_320193",
+      "type": "Offering Registrations",
+      "title": "S-8 : Offering Registrations",
+      "description": "Initial registration statement for securities to be offered to employees pursuant to employee benefit plans",
+      "filingDate": "2022-04-29T00:00:00.000Z",
+      "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000119312522128368/thumbnail.png",
+      "formType": "S-8"
     },
     {
       "id": "0000320193-22-000059_320193",

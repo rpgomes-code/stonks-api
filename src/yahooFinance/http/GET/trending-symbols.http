@@ -9,33 +9,45 @@ Host: localhost:3000
 
 HTTP/1.1 200 OK
 X-Powered-By: Express
+Vary: Origin
+Access-Control-Allow-Credentials: true
+Access-Control-Expose-Headers: Content-Length,X-Total-Count
+X-RateLimit-Limit: 25
+X-RateLimit-Remaining: 24
+X-RateLimit-Reset: 60
+X-RateLimit-Limit-short: 10
+X-RateLimit-Remaining-short: 9
+X-RateLimit-Reset-short: 60
+X-RateLimit-Limit-longer: 70
+X-RateLimit-Remaining-longer: 69
+X-RateLimit-Reset-longer: 60
 Content-Type: application/json; charset=utf-8
-Content-Length: 166
-ETag: W/"a6-I2RYLBs+ROc7jrOF9rwnOpH8KZE"
-Date: Tue, 13 Aug 2024 22:32:11 GMT
+Content-Length: 168
+ETag: W/"a8-Sa5+1ZUxSAXAALnZAtjIiaATJlI"
+Date: Wed, 14 Aug 2024 18:50:36 GMT
 Connection: close
 
 {
   "count": 5,
   "quotes": [
     {
-      "symbol": "SBUX"
+      "symbol": "GOOG"
     },
     {
-      "symbol": "CMG"
+      "symbol": "K"
     },
     {
-      "symbol": "NU"
+      "symbol": "CLOV"
     },
     {
-      "symbol": "DKNG"
+      "symbol": "GOOGL"
     },
     {
-      "symbol": "NKE"
+      "symbol": "SERV"
     }
   ],
-  "jobTimestamp": 1723587570922,
-  "startInterval": 202408132100
+  "jobTimestamp": 1723659512109,
+  "startInterval": 202408141700
 }
 
 ## HTTP CODE - 404 ##

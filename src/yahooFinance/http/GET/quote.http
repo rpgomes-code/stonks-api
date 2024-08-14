@@ -9,10 +9,22 @@ Host: localhost:3000
 
 HTTP/1.1 200 OK
 X-Powered-By: Express
+Vary: Origin
+Access-Control-Allow-Credentials: true
+Access-Control-Expose-Headers: Content-Length,X-Total-Count
+X-RateLimit-Limit: 25
+X-RateLimit-Remaining: 24
+X-RateLimit-Reset: 60
+X-RateLimit-Limit-short: 10
+X-RateLimit-Remaining-short: 9
+X-RateLimit-Reset-short: 60
+X-RateLimit-Limit-longer: 70
+X-RateLimit-Remaining-longer: 69
+X-RateLimit-Reset-longer: 60
 Content-Type: application/json; charset=utf-8
-Content-Length: 2560
-ETag: W/"a00-nCIilyXB3S3PM+vUi7rAr22/vLM"
-Date: Tue, 13 Aug 2024 22:27:23 GMT
+Content-Length: 2430
+ETag: W/"97e-COgeT+SuaLGWQnVXNYzECmnmu00"
+Date: Wed, 14 Aug 2024 18:49:04 GMT
 Connection: close
 
 {
@@ -23,70 +35,6 @@ Connection: close
   "quoteSourceName": "Nasdaq Real Time Price",
   "triggerable": true,
   "customPriceAlertConfidence": "HIGH",
-  "postMarketChangePercent": -0.21602423,
-  "postMarketTime": "2024-08-13T22:27:08.000Z",
-  "postMarketPrice": 220.792,
-  "postMarketChange": -0.47799683,
-  "regularMarketChange": 3.7400055,
-  "regularMarketTime": "2024-08-13T20:00:01.000Z",
-  "regularMarketDayHigh": 221.89,
-  "regularMarketDayRange": {
-    "low": 219.01,
-    "high": 221.89
-  },
-  "regularMarketDayLow": 219.01,
-  "regularMarketVolume": 41453325,
-  "regularMarketPreviousClose": 217.53,
-  "bid": 221.04,
-  "ask": 221.18,
-  "bidSize": 1,
-  "askSize": 1,
-  "fullExchangeName": "NasdaqGS",
-  "financialCurrency": "USD",
-  "regularMarketOpen": 219.105,
-  "averageDailyVolume3Month": 65826293,
-  "averageDailyVolume10Day": 63983030,
-  "fiftyTwoWeekLowChange": 57.190002,
-  "fiftyTwoWeekLowChangePercent": 0.3485495,
-  "fiftyTwoWeekRange": {
-    "low": 164.08,
-    "high": 237.23
-  },
-  "fiftyTwoWeekHighChange": -15.959991,
-  "fiftyTwoWeekHighChangePercent": -0.06727645,
-  "fiftyTwoWeekLow": 164.08,
-  "fiftyTwoWeekHigh": 237.23,
-  "fiftyTwoWeekChangePercent": 22.586643,
-  "dividendDate": "2024-08-15T00:00:00.000Z",
-  "earningsTimestamp": "2024-08-01T20:30:00.000Z",
-  "earningsTimestampStart": "2024-10-31T10:59:00.000Z",
-  "earningsTimestampEnd": "2024-11-04T12:00:00.000Z",
-  "earningsCallTimestampStart": 1722546000,
-  "earningsCallTimestampEnd": 1722546000,
-  "isEarningsDateEstimate": true,
-  "trailingAnnualDividendRate": 0.97,
-  "trailingPE": 33.678844,
-  "dividendRate": 1,
-  "trailingAnnualDividendYield": 0.0044591553,
-  "dividendYield": 0.46,
-  "epsTrailingTwelveMonths": 6.57,
-  "epsForward": 6.85,
-  "epsCurrentYear": 6.13,
-  "priceEpsCurrentYear": 36.09625,
-  "sharesOutstanding": 15204100096,
-  "bookValue": 4.382,
-  "fiftyDayAverage": 215.2808,
-  "fiftyDayAverageChange": 5.989197,
-  "fiftyDayAverageChangePercent": 0.027820393,
-  "twoHundredDayAverage": 190.6497,
-  "twoHundredDayAverageChange": 30.6203,
-  "twoHundredDayAverageChangePercent": 0.16061027,
-  "marketCap": 3364211392512,
-  "forwardPE": 32.302193,
-  "priceToBook": 50.49521,
-  "sourceInterval": 15,
-  "exchangeDataDelayedBy": 0,
-  "averageAnalystRating": "2.0 - Buy",
   "currency": "USD",
   "exchange": "NMS",
   "shortName": "Apple Inc.",
@@ -97,14 +45,74 @@ Connection: close
   "gmtOffSetMilliseconds": -14400000,
   "market": "us_market",
   "esgPopulated": false,
-  "regularMarketPrice": 221.27,
-  "regularMarketChangePercent": 1.7193056,
-  "marketState": "POST",
+  "regularMarketChangePercent": -0.11072914,
+  "regularMarketPrice": 221.025,
+  "marketState": "REGULAR",
+  "epsCurrentYear": 6.7,
+  "priceEpsCurrentYear": 32.988808,
+  "sharesOutstanding": 15204100096,
+  "bookValue": 4.382,
+  "fiftyDayAverage": 215.8612,
+  "fiftyDayAverageChange": 5.163788,
+  "fiftyDayAverageChangePercent": 0.023921797,
+  "twoHundredDayAverage": 190.90054,
+  "twoHundredDayAverageChange": 30.12445,
+  "twoHundredDayAverageChangePercent": 0.1578018,
+  "marketCap": 3360486064128,
+  "forwardPE": 29.548796,
+  "priceToBook": 50.439297,
+  "sourceInterval": 15,
+  "exchangeDataDelayedBy": 0,
+  "averageAnalystRating": "2.0 - Buy",
+  "tradeable": false,
+  "cryptoTradeable": false,
+  "regularMarketChange": -0.24501038,
+  "regularMarketTime": "2024-08-14T18:49:03.000Z",
+  "regularMarketDayHigh": 223.03,
+  "regularMarketDayRange": {
+    "low": 219.7,
+    "high": 223.03
+  },
+  "regularMarketDayLow": 219.7,
+  "regularMarketVolume": 26415709,
+  "regularMarketPreviousClose": 221.27,
+  "bid": 209.42,
+  "ask": 221.28,
+  "bidSize": 1,
+  "askSize": 1,
+  "fullExchangeName": "NasdaqGS",
+  "financialCurrency": "USD",
+  "regularMarketOpen": 220.565,
+  "averageDailyVolume3Month": 65693027,
+  "averageDailyVolume10Day": 64231760,
+  "fiftyTwoWeekLowChange": 56.944992,
+  "fiftyTwoWeekLowChangePercent": 0.34705627,
+  "fiftyTwoWeekRange": {
+    "low": 164.08,
+    "high": 237.23
+  },
+  "fiftyTwoWeekHighChange": -16.205002,
+  "fiftyTwoWeekHighChangePercent": -0.06830925,
+  "fiftyTwoWeekLow": 164.08,
+  "fiftyTwoWeekHigh": 237.23,
+  "fiftyTwoWeekChangePercent": 25.315739,
+  "dividendDate": "2024-08-15T00:00:00.000Z",
+  "earningsTimestamp": "2024-08-01T20:30:00.000Z",
+  "earningsTimestampStart": "2024-10-31T10:59:00.000Z",
+  "earningsTimestampEnd": "2024-11-04T12:00:00.000Z",
+  "earningsCallTimestampStart": 1722546000,
+  "earningsCallTimestampEnd": 1722546000,
+  "isEarningsDateEstimate": true,
+  "trailingAnnualDividendRate": 0.97,
+  "trailingPE": 33.641552,
+  "dividendRate": 1,
+  "trailingAnnualDividendYield": 0.0043837847,
+  "dividendYield": 0.45,
+  "epsTrailingTwelveMonths": 6.57,
+  "epsForward": 7.48,
   "hasPrePostMarketData": true,
   "firstTradeDateMilliseconds": "1980-12-12T14:30:00.000Z",
   "priceHint": 2,
-  "tradeable": false,
-  "cryptoTradeable": false,
   "displayName": "Apple",
   "symbol": "AAPL"
 }

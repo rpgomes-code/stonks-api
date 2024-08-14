@@ -9,10 +9,22 @@ Host: localhost:3000
 
 HTTP/1.1 200 OK
 X-Powered-By: Express
+Vary: Origin
+Access-Control-Allow-Credentials: true
+Access-Control-Expose-Headers: Content-Length,X-Total-Count
+X-RateLimit-Limit: 25
+X-RateLimit-Remaining: 23
+X-RateLimit-Reset: 49
+X-RateLimit-Limit-short: 10
+X-RateLimit-Remaining-short: 8
+X-RateLimit-Reset-short: 49
+X-RateLimit-Limit-longer: 70
+X-RateLimit-Remaining-longer: 68
+X-RateLimit-Reset-longer: 49
 Content-Type: application/json; charset=utf-8
-Content-Length: 4593
-ETag: W/"11f1-5Oh7R+bU3FR9AdW25bGC70zVbcE"
-Date: Tue, 13 Aug 2024 22:28:36 GMT
+Content-Length: 4589
+ETag: W/"11ed-5AuKn8Tao2yRjXGos/9OXQvu7P8"
+Date: Wed, 14 Aug 2024 18:48:46 GMT
 Connection: close
 
 {
@@ -143,11 +155,11 @@ Connection: close
   },
   "financialData": {
     "maxAge": 86400,
-    "currentPrice": 221.27,
-    "targetHighPrice": 274.32,
-    "targetLowPrice": 168.12,
-    "targetMeanPrice": 216.01,
-    "targetMedianPrice": 219.91,
+    "currentPrice": 221.05,
+    "targetHighPrice": 300,
+    "targetLowPrice": 183.86,
+    "targetMeanPrice": 236.23,
+    "targetMedianPrice": 240.5,
     "recommendationMean": 2,
     "recommendationKey": "buy",
     "numberOfAnalystOpinions": 38,
