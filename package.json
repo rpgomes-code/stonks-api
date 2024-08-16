@@ -25,6 +25,7 @@
     "@nestjs/core": "^10.3.10",
     "@nestjs/mapped-types": "^2.0.5",
     "@nestjs/platform-express": "^10.3.10",
+    "@nestjs/swagger": "^7.4.0",
     "@nestjs/throttler": "^6.1.1",
     "@prisma/client": "5.18.0",
     "cache-manager": "^5.2.3",
@@ -34,6 +35,7 @@
     "node-fetch": "^3.3.2",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
+    "swagger-ui-express": "^5.0.1",
     "yahoo-finance2": "^2.11.3"
   },
   "devDependencies": {
