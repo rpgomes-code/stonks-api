@@ -1,7 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { ValidationPipe } from '@nestjs/common';
 import { AppModule } from './app.module';
-import { HttpExceptionFilter } from './http-exception.filter';
 import { CorsOptions } from '@nestjs/common/interfaces/external/cors-options.interface';
 import { config } from 'dotenv';
 
@@ -21,22 +20,6 @@ async function bootstrap() {
     preflightContinue: false,
     optionsSuccessStatus: 204,
   };
-  
-  /* IMPLEMENT CUSTOM ORIGIN LOGIC LIKE CERBERUS
-  app.enableCors((req, callback) => {
-    const corsOptions: CorsOptions = {
-      // Your default options here
-    };
-  
-    if (req.header('Origin') === 'http://trusted-client.com') {
-      corsOptions.origin = true; // reflect (enable) the requested origin in the CORS response
-    } else {
-      corsOptions.origin = false; // disable CORS for this request
-    }
-  
-    callback(null, corsOptions); // callback expects two parameters: error and options
-  });
-  */
 
   app.enableCors({
     ...corsOptions,
@@ -55,7 +38,6 @@ async function bootstrap() {
   });
 
   app.useGlobalPipes(new ValidationPipe());
-  app.useGlobalFilters(new HttpExceptionFilter());
   await app.listen(3000);
 }
 bootstrap();

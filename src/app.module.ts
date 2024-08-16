@@ -1,14 +1,13 @@
 import { Module } from '@nestjs/common';
 import { CacheModule } from '@nestjs/cache-manager';
 import { ThrottlerModule, ThrottlerGuard } from '@nestjs/throttler';
-import { APP_GUARD } from '@nestjs/core';
-import { ApplicationController } from './database/application/application.controller';
-import { ApplicationService } from './database/application/application.service';
-import { AppAccessService } from './database/appAccess/appAccess.service';
-import { AppAccessController } from './database/appAccess/appAccess.controller';
+import { APP_GUARD, APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
 import { PrismaService } from './database/prisma/prisma.service';
 import { YahooFinanceService } from './yahooFinance/yahooFinance.service';
 import { YahooFinanceController } from './yahooFinance/yahooFinance.controller';
+import { LogService } from './database/log/log.service';
+import { HttpExceptionFilter } from './http-exception.filter';
+import { LoggingInterceptor } from './logging.interceptor';
 
 @Module({
   imports: [
@@ -35,8 +34,6 @@ import { YahooFinanceController } from './yahooFinance/yahooFinance.controller';
     ]),
   ],
   controllers: [
-    ApplicationController, 
-    AppAccessController,
     YahooFinanceController
   ],
   providers: [
@@ -44,10 +41,17 @@ import { YahooFinanceController } from './yahooFinance/yahooFinance.controller';
       provide: APP_GUARD,
       useClass: ThrottlerGuard
     },
-    ApplicationService,
-    AppAccessService,
+    {
+      provide: APP_FILTER,
+      useClass: HttpExceptionFilter,
+    },
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: LoggingInterceptor,
+    },
     PrismaService,
-    YahooFinanceService
+    YahooFinanceService,
+    LogService
   ],
 })
 export class AppModule {}
