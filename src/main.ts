@@ -50,7 +50,7 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe());
   
-  const port = process.env.PORT || 3000;
+  const port = process.env.PORT || 3010;
   await app.listen(port);
   console.log(`Application is running on: http://localhost:${port}`);
   console.log(`Swagger documentation is available at: http://localhost:${port}/api`);
