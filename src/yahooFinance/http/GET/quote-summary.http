@@ -1,9 +1,7 @@
 ### Request ###
 
 GET /yahoo-finance/quote-summary?symbol=AAPL&modules=assetProfile,financialData HTTP/1.1
-Host: localhost:3000
-
-### Response ###
+Host: localhost:3010
 
 ## HTTP CODE - 200 ##
 

@@ -1,7 +1,7 @@
 ### Request ###
 
 GET /yahoo-finance/historical?symbol=AAPL&from=2024-07-30&to=2024-08-01&interval=1d HTTP/1.1
-Host: localhost:3000
+Host: localhost:3010
 
 ### Response ###
 

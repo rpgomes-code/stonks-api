@@ -1,7 +1,7 @@
 ### Request ###
 
 GET /yahoo-finance/insights?symbol=AAPL&reportsCount=1 HTTP/1.1
-Host: localhost:3000
+Host: localhost:3010
 
 ### Response ###
 
