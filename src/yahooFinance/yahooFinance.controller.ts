@@ -29,7 +29,7 @@ export class YahooFinanceController {
   @ApiOkResponse({ description: 'Historical data retrieved successfully', type: [HistoricalDataDTO] })
   @ApiResponse({ status: 404, description: 'Historical data not found' })
   @ApiResponse({ status: 500, description: 'Internal server error' })
-  @Throttle({ default: { limit: 25, ttl: 60000 } })
+  @Throttle({ default: { limit: 100, ttl: 60000 } })
   @Get('historical')
   async getHistoricalData(
     @Query('symbol') symbol: string,
@@ -46,7 +46,7 @@ export class YahooFinanceController {
   @ApiOkResponse({ description: 'Insights retrieved successfully', type: InsightsDTO })
   @ApiResponse({ status: 404, description: 'Insights not found' })
   @ApiResponse({ status: 500, description: 'Internal server error' })
-  @Throttle({ short: { limit: 10, ttl: 60000 } })
+  @Throttle({ short: { limit: 75, ttl: 60000 } })
   @Get('insights')
   async getInsights(
     @Query('symbol') symbol: string,
@@ -60,7 +60,7 @@ export class YahooFinanceController {
   @ApiOkResponse({ description: 'Quote retrieved successfully', type: QuoteDTO })
   @ApiResponse({ status: 404, description: 'Quote not found' })
   @ApiResponse({ status: 500, description: 'Internal server error' })
-  @Throttle({ default: { limit: 25, ttl: 60000 } })
+  @Throttle({ default: { limit: 100, ttl: 60000 } })
   @Get('quote')
   async getQuote(@Query('symbol') symbol: string) {
     return this.yahooFinanceService.getQuote(symbol);
@@ -72,7 +72,7 @@ export class YahooFinanceController {
   @ApiOkResponse({ description: 'Quote summary retrieved successfully', type: QuoteSummaryDTO })
   @ApiResponse({ status: 404, description: 'Quote summary not found' })
   @ApiResponse({ status: 500, description: 'Internal server error' })
-  @Throttle({ short: { limit: 10, ttl: 60000 } })
+  @Throttle({ short: { limit: 75, ttl: 60000 } })
   @Get('quote-summary')
   async getQuoteSummary(
     @Query('symbol') symbol: string,
@@ -88,7 +88,7 @@ export class YahooFinanceController {
   @ApiOkResponse({ description: 'Search results retrieved successfully', type: SearchResultDTO })
   @ApiResponse({ status: 404, description: 'No results found' })
   @ApiResponse({ status: 500, description: 'Internal server error' })
-  @Throttle({ longer: { limit: 70, ttl: 60000 } })
+  @Throttle({ longer: { limit: 250, ttl: 60000 } })
   @Get('search')
   async search(
     @Query('query') query: string,
@@ -106,7 +106,7 @@ export class YahooFinanceController {
   @ApiOkResponse({ description: 'Chart data retrieved successfully', type: ChartResultDTO })
   @ApiResponse({ status: 404, description: 'Chart data not found' })
   @ApiResponse({ status: 500, description: 'Internal server error' })
-  @Throttle({ short: { limit: 10, ttl: 60000 } })
+  @Throttle({ short: { limit: 75, ttl: 60000 } })
   @Get('chart')
   async getChart(
     @Query('symbol') symbol: string,
@@ -123,7 +123,7 @@ export class YahooFinanceController {
   @ApiOkResponse({ description: 'Trending symbols retrieved successfully', type: TrendingSymbolsDTO })
   @ApiResponse({ status: 404, description: 'Trending symbols not found' })
   @ApiResponse({ status: 500, description: 'Internal server error' })
-  @Throttle({ default: { limit: 25, ttl: 60000 } })
+  @Throttle({ default: { limit: 100, ttl: 60000 } })
   @Get('trending-symbols')
   async getTrendingSymbols(
     @Query('country') country: string,
@@ -137,7 +137,7 @@ export class YahooFinanceController {
   @ApiOkResponse({ description: 'Recommendations retrieved successfully', type: RecommendationDTO })
   @ApiResponse({ status: 404, description: 'Recommendations not found' })
   @ApiResponse({ status: 500, description: 'Internal server error' })
-  @Throttle({ default: { limit: 25, ttl: 60000 } })
+  @Throttle({ default: { limit: 100, ttl: 60000 } })
   @Get('recommendations')
   async getRecommendations(@Query('symbol') symbol: string) {
     return this.yahooFinanceService.getRecommendationsBySymbol(symbol);
@@ -148,7 +148,7 @@ export class YahooFinanceController {
   @ApiOkResponse({ description: 'Options data retrieved successfully', type: OptionsDTO })
   @ApiResponse({ status: 404, description: 'Options data not found' })
   @ApiResponse({ status: 500, description: 'Internal server error' })
-  @Throttle({ short: { limit: 10, ttl: 60000 } })
+  @Throttle({ short: { limit: 75, ttl: 60000 } })
   @Get('options')
   async getOptions(@Query('symbol') symbol: string) {
     return this.yahooFinanceService.getOptions(symbol);
@@ -159,7 +159,7 @@ export class YahooFinanceController {
   @ApiOkResponse({ description: 'Stock image URL retrieved successfully', type: StockImageDTO })
   @ApiResponse({ status: 404, description: 'Stock image not found' })
   @ApiResponse({ status: 500, description: 'Internal server error' })
-  @Throttle({ longer: { limit: 70, ttl: 60000 } })
+  @Throttle({ longer: { limit: 250, ttl: 60000 } })
   @Get('stock-image')
   async getStockImage(@Query('symbol') symbol: string) {
     return this.yahooFinanceService.getStockImage(symbol);

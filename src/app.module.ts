@@ -19,17 +19,17 @@ import { LoggingInterceptor } from './logging.interceptor';
       {
         name: 'default',
         ttl: 60000,
-        limit: 25,
+        limit: 100,
       },
       {
         name: 'short',
         ttl: 60000,
-        limit: 10,
+        limit: 75,
       },
       {
         name: 'longer',
         ttl: 60000,
-        limit: 70,
+        limit: 250,
       },
     ]),
   ],
